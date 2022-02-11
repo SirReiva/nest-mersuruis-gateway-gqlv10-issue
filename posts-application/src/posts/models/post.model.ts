@@ -1,5 +1,4 @@
-import { Directive, Field, ID, Int, ObjectType } from '@nestjs/graphql';
-import { UserPost } from './user.model';
+import { Field, ID, Int, ObjectType } from '@nestjs/graphql';
 
 @ObjectType()
 export class Post {
@@ -11,7 +10,4 @@ export class Post {
 
   @Field((type) => Int)
   authorId: number;
-
-  @Field((type) => UserPost)
-  user?: UserPost;
 }
